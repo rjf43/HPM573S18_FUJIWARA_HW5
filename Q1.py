@@ -94,7 +94,7 @@ myMoney = Simulation(1, NUMBER_GAMES, HEADS_PROB)
 myMoney.simulate(NUMBER_FLIPS)
 
 # Print expected value
-print(myMoney.get_expected_value())
+print('The expected value is', myMoney.get_expected_value())
 
 # Print minimum and maximum
 print('The maximum reward is', myMoney.get_max())
@@ -107,8 +107,9 @@ FigureSupport.graph_histogram(
     x_label= 'Payouts ($)',
     y_label= 'Number of games'
 )
-print('The minimum and maximum reward are -250 and +250, respectively')
 
 # Generate probability of losing money
 print('The probability of a loss in this game is', myMoney.get_probability_of_loss())
+
+
 
