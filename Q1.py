@@ -64,6 +64,12 @@ class Simulation:
     def get_payouts(self):
         return self._payouts
 
+    def get_max(self):
+        return max(self._payouts)
+
+    def get_min(self):
+        return min(self._payouts)
+
     def get_expected_value(self):
         return sum(self._payouts)/len(self._payouts)
 
@@ -86,6 +92,13 @@ myMoney = Simulation(1, NUMBER_GAMES, HEADS_PROB)
 
 # Run each game within myMoney
 myMoney.simulate(NUMBER_FLIPS)
+
+# Print expected value
+print(myMoney.get_expected_value())
+
+# Print minimum and maximum
+print('The maximum reward is', myMoney.get_max())
+print('The minimum reward is', myMoney.get_min())
 
 # Generate histogram
 FigureSupport.graph_histogram(
